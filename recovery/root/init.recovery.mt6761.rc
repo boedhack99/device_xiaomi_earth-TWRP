@@ -1,6 +1,8 @@
 import /init.microtrust.rc
 
 on post-fs
+    start boot-hal-1-2
+
     # Support A/B feature for emmc boot region
     symlink /dev/block/sda /dev/block/mmcblk0boot0
     symlink /dev/block/sdb /dev/block/mmcblk0boot1
