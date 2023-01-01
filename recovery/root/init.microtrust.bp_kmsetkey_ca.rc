@@ -1,5 +1,0 @@
-service beanpod_check_keybox_service /system/bin/bp_kmsetkey_ca -c
-    class late_start
-    user root
-    group root
-    oneshot
