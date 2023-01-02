@@ -2,7 +2,6 @@ import /init.microtrust.rc
 
 on post-fs
     start boot-hal-1-2
-    start overrideprops
 
     # Support A/B feature for emmc boot region
     symlink /dev/block/sda /dev/block/mmcblk0boot0
@@ -64,13 +63,6 @@ service gatekeeper-1-0 /system/bin/android.hardware.gatekeeper@1.0-service
 service keymaster-4-0 /system/bin/android.hardware.keymaster@4.1-service.beanpod
     user root
     group root drmrpc
-    disabled
-    oneshot
-    seclabel u:r:recovery:s0
-
-service overrideprops /system/bin/overrideprops.sh
-    user root
-    group root
     disabled
     oneshot
     seclabel u:r:recovery:s0

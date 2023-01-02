@@ -62,6 +62,7 @@ TARGET_RECOVERY_DEVICE_MODULES += \
     libkeymaster41 \
     libpuresoftkeymasterdevice
 
-# Properties
-TW_OVERRIDE_SYSTEM_PROPS := \
-    "ro.build.fingerprint=ro.system.build.fingerprint;ro.build.version.incremental"
+# Blacklist
+PRODUCT_SYSTEM_PROPERTY_BLACKLIST += \
+    ro.bootimage.build.date.utc \
+    ro.build.date.utc
