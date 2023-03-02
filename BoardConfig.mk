@@ -14,16 +14,8 @@ BOARD_USES_RECOVERY_AS_BOOT := true
 AB_OTA_PARTITIONS += \
     boot \
     dtbo \
-    lk \
-    logo \
-    md1img \
-    preloader \
     product \
-    scp \
-    spmfw \
-    sspm \
     system \
-    tee \
     vbmeta \
     vbmeta_system \
     vbmeta_vendor \
@@ -35,7 +27,7 @@ TARGET_ARCH_VARIANT := armv8-a
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
 TARGET_CPU_VARIANT := generic
-TARGET_CPU_VARIANT := cortex-a53
+TARGET_CPU_VARIANT_RUNTIME := cortex-a53
 
 TARGET_USES_64_BIT_BINDER := true
 
@@ -62,7 +54,7 @@ BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 BOARD_MKBOOTIMG_ARGS += --dtb $(TARGET_PREBUILT_DTB)
 
 TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/kernel
-TARGET_PREBUILT_DTB := $(DEVICE_PATH)/prebuilt/dtb.img
+TARGET_PREBUILT_DTB := $(DEVICE_PATH)/prebuilt/dtb
 
 # AVB
 BOARD_AVB_ENABLE := true
