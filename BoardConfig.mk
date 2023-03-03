@@ -16,7 +16,6 @@ AB_OTA_PARTITIONS += \
     dtbo \
     product \
     system \
-    vbmeta \
     vbmeta_system \
     vbmeta_vendor \
     vendor
