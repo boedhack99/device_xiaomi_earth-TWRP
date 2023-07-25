@@ -8,6 +8,10 @@ LOCAL_PATH := device/xiaomi/ice
 
 # Enable Virtual A/B OTA
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/compression_retrofit.mk)
+
+# Configure emulated_storage.mk
+$(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
 ENABLE_VIRTUAL_AB := true
 
