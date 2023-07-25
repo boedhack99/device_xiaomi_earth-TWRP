@@ -11,5 +11,3 @@ product                                             /product              erofs 
 product                                             /product              ext4     ro                                                              wait,slotselect,avb,logical,first_stage_mount
 /dev/block/by-name/md_udc                           /metadata             ext4     noatime,nosuid,nodev,discard                                    wait,check,formattable,first_stage_mount
 /dev/block/by-name/userdata                         /data                 f2fs     noatime,nosuid,nodev,discard,noflush_merge,reserve_root=134217,resgid=1065,inlinecrypt,alloc_mode=reuse,fsync_mode=nobarrier latemount,wait,check,quota,reservedsize=128M,formattable,resize,checkpoint=fs,fileencryption=aes-256-xts:aes-256-cts:v2,keydirectory=/metadata/vold/metadata_encryption
-/dev/block/by-name/misc                             /misc                 emmc     defaults                                                        defaults
-/dev/block/by-name/boot                             /boot                 emmc     defaults                                                        first_stage_mount,nofail,slotselect
