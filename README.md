@@ -1,1 +1,1 @@
-## Device config for TWRP Redmi A1 / POCO C50 ( ice )
+## Device config for TWRP Redmi 12C / POCO C55 ( earth )

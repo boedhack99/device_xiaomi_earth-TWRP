@@ -1,10 +1,12 @@
 <!--
     Input:
+        manifest_isphal.xml
         manifest_sensor_hidl_v2.xml
         manifest_audio.xml
         manifest_dsds.xml
         manifest_radioconfig.xml
         manifest_em.xml
+        manifest_bgservice.xml
         manifest_videotelephony.xml
         manifest_km41.xml
         manifest_tee.xml
@@ -14,6 +16,7 @@
         manifest_aee.xml
         manifest_boot.xml
         manifest_netdagent.xml
+        manifest_tetheroffloadservice.xml
         manifest_pq.xml
         manifest_mmservice.xml
         manifest_mmagent.xml
@@ -22,6 +25,7 @@
         manifest_composer.xml
         manifest_target_level_r.xml
         manifest.xml
+        manifest_displayfeature.xml
 -->
 <manifest version="4.0" type="device" target-level="5">
     <hal format="hidl">
@@ -229,6 +233,26 @@
         <fqname>@2.0::ISensors/default</fqname>
     </hal>
     <hal format="hidl">
+        <name>android.hardware.tetheroffload.config</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IOffloadConfig</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.0::IOffloadConfig/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>android.hardware.tetheroffload.control</name>
+        <transport>hwbinder</transport>
+        <version>1.1</version>
+        <interface>
+            <name>IOffloadControl</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.1::IOffloadControl/default</fqname>
+    </hal>
+    <hal format="hidl">
         <name>android.hardware.thermal</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
@@ -239,6 +263,36 @@
         </interface>
         <fqname>@1.0::IThermal/default</fqname>
         <fqname>@2.0::IThermal/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>com.fingerprints.extension</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IFingerprintEngineering</name>
+            <instance>default</instance>
+        </interface>
+        <interface>
+            <name>IFingerprintNavigation</name>
+            <instance>default</instance>
+        </interface>
+        <interface>
+            <name>IFingerprintSensorTest</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.0::IFingerprintEngineering/default</fqname>
+        <fqname>@1.0::IFingerprintNavigation/default</fqname>
+        <fqname>@1.0::IFingerprintSensorTest/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.fpsensor.hardware.fpsensorhidlsvc</name>
+        <transport>hwbinder</transport>
+        <version>2.0</version>
+        <interface>
+            <name>IFpsensorHidlSvc</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@2.0::IFpsensorHidlSvc/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.mediatek.hardware.aee</name>
@@ -291,6 +345,26 @@
             <instance>default</instance>
         </interface>
         <fqname>@1.0::IATMs/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.mediatek.hardware.camera.bgservice</name>
+        <transport>hwbinder</transport>
+        <version>1.1</version>
+        <interface>
+            <name>IBGService</name>
+            <instance>internal/0</instance>
+        </interface>
+        <fqname>@1.1::IBGService/internal/0</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.mediatek.hardware.camera.isphal</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IISPModule</name>
+            <instance>internal/0</instance>
+        </interface>
+        <fqname>@1.0::IISPModule/internal/0</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.mediatek.hardware.composer_ext</name>
@@ -478,6 +552,26 @@
             <instance>default</instance>
         </interface>
         <fqname>@1.0::IVideoTelephony/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.microtrust.hardware.soter</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>ISoter</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.0::ISoter/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.xiaomi.hardware.displayfeature</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IDisplayFeature</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.0::IDisplayFeature/default</fqname>
     </hal>
     <sepolicy>
         <version>31.0</version>
